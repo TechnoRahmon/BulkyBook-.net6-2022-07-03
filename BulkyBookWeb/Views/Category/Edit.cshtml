@@ -5,7 +5,7 @@
 <form method="post">
 	<div class="border border-1 p-3 mt-4 text-white">
 		<div class="row pb-2">
-			<h2 class="text-white  ">Create Category</h2>
+			<h2 class="text-white  ">Edit Category</h2>
 			<hr style="height:1px;" class="my-1 text-white" />
 		</div>
 		<div asp-validation-summary="All" class="text-danger"></div>
@@ -20,7 +20,7 @@
 				<input asp-for="DisplayOrder" class="form-control" />
 				<span asp-validation-for="DisplayOrder" class="text-danger"></span>
 		</div>
-		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
 		<a asp-controller="Category"  asp-action="Index" class="btn btn-secondary" style="width:150px;">
 			Back to list
 		</a>

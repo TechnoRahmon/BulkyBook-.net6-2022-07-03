@@ -1,0 +1,31 @@
+﻿
+@model Category
+
+
+<form method="post" asp-route-id="@Model.Id">
+	<div class="border border-1 p-3 mt-4 text-white">
+		<div class="row pb-2">
+			<h2 class="text-white  ">Edit Category</h2>
+			<hr style="height:1px;" class="my-1 text-white" />
+		</div>
+		<div asp-validation-summary="All" class="text-danger"></div>
+		<div class="mb-3">
+				<label asp-for="Name"></label>
+				<input readonly asp-for="Name" class="form-control"  value="@Model.Name"/>
+		</div>	
+
+		<div class="mb-3">
+				<label asp-for="DisplayOrder"></label>
+				<input readonly asp-for="DisplayOrder" class="form-control"  value="@Model.DisplayOrder"/>
+		</div>
+
+		<button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+		<a asp-controller="Category"  asp-action="Index" class="btn btn-secondary" style="width:150px;">
+			Back to list
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial"/>
+}
